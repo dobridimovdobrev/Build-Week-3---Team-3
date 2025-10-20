@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #f4f2ee;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+p {
+  margin: 0 !important;
+}
+
+.search-absolute {
+  position: absolute;
+  top: 20px;
+  left: -3px;
+}
+
+input::placeholder {
+  padding-left: 1.7rem;
+  opacity: 0.5;
+  color: #000;
+}
+
+#collapsible-nav-dropdown {
+  padding: 0;
+}
+
+.nav-font-size {
+  font-size: 12px;
+}
+
+.search-width {
+  min-width: 280px;
+}
+
+.margin-custom {
+  margin-left: 70px !important;
+}
+
+.profile-img-absolute{
+  position: absolute;
+  top: 107px;
+  left: 37px;
+
+}
+
+.pencil-absolute{
+  position: absolute;
+  top: 18px;
+  right: 15px;
+}
+
+button{
+  border: none;
+}
+
+.profile-card-color{
+  background-color: #DDE7F1;
+}
+
+.profile-card-font{
+  font-size: 14px;
+}
+
+.grey{
+  color:#8d8d8d;
+}
