@@ -7,11 +7,11 @@ const Home = () => {
     <Container>
       <Row>
         {/* main content */}
-        <Col lg={8}>
+        <Col className="p-1" lg={8}>
           <Profile />
         </Col>
         {/* sidebar */}
-        <Col lg={4}>
+        <Col className="p-1" lg={4}>
           <Sidebar />
         </Col>
       </Row>

@@ -33,15 +33,15 @@ function Navigation() {
           <Nav className="me-auto gap-4">
             {/* search input */}
             <div className="d-flex position-relative align-items-center me-5 search-width ">
+              <button>
+                <BiSearch className="search-absolute fs-5 mx-3 text-dark" />
+              </button>
               <Form.Control
                 type="text"
                 placeholder="Search"
                 className=" mr-sm-2 rounded-5"
               />
               {/* search icon */}
-              <span>
-                <BiSearch className="search-absolute fs-5 mx-3 text-dark" />
-              </span>
             </div>
             {/* Menu items */}
             <Nav.Link to="/" className="d-flex flex-column justify-content-center align-items-center margin-custom">
