@@ -46,36 +46,50 @@ input::placeholder {
   margin-left: 70px !important;
 }
 
-.profile-img-absolute{
+.profile-img-absolute {
   position: absolute;
   top: 107px;
   left: 37px;
-
 }
 
-.pencil-absolute{
+.pencil-absolute {
   position: absolute;
   top: 18px;
   right: 15px;
 }
 
-button{
+button {
   border: none;
   background: none;
 }
 
-.profile-card-color{
-  background-color: #DDE7F1;
+.profile-card-color {
+  background-color: #dde7f1;
 }
 
-.profile-card-font{
+.profile-card-font {
   font-size: 14px;
 }
 
-.grey{
-  color:#8d8d8d;
+.grey {
+  color: #8d8d8d;
 }
 
-.custom-width{
+.custom-width {
   max-width: 24rem;
+}
+
+.foot-font-size {
+  font-size: 10px;
+}
+
+.foot-btn:hover {
+  text-decoration: underline;
+  text-decoration-color: #0a6ffd;
+  color: #0a6ffd !important;
+}
+
+.language:hover {
+  border-color: #000 !important;
+  border: 2px solid !important;
 }
