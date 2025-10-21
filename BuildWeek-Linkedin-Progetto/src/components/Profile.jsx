@@ -23,7 +23,7 @@ const Profile = () => {
             />
             {/* Modify Profile background image */}
             <button
-              className="d-flex justify-content-center align-items-center pencil-absolute border-0 rounded-circle fs-5"
+              className="d-flex justify-content-center align-items-center bg-light pencil-absolute rounded-circle fs-5"
               style={{ width: "35px", height: "35px" }}
             >
               <BsPencil className="text-primary" />

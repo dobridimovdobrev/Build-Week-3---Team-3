@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const Home = () => {
   return (
     <Container>
-      <Row>
+      <Row className="g-0">
         {/* main content */}
         <Col className="p-1" lg={8}>
           <Profile />
