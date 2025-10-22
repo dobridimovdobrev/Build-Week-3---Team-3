@@ -12,6 +12,7 @@ const Home = () => {
         {/* main content */}
         <Col className="p-1" lg={8}>
           <Profile />
+          <ExperiencesList />
         </Col>
         {/* sidebar */}
         <Col className="p-1" lg={4}>
