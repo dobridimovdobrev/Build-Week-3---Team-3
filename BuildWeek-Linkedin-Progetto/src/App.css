@@ -67,7 +67,8 @@ button {
   background-color: #dde7f1;
 }
 
-.profile-card-font {
+.profile-card-font,
+.custom-font {
   font-size: 14px;
 }
 
@@ -76,11 +77,11 @@ button {
 }
 
 .custom-width {
-  max-width: 24rem;
+  max-width: 320px;
 }
 
 .foot-font-size {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .foot-btn:hover {
@@ -96,4 +97,7 @@ button {
 
 .showall-btn:hover {
   background-color: #f3f3f3;
+}
+.dropdown-menu {
+  width: 100% !important;
 }

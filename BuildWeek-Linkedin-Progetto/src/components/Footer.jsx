@@ -17,20 +17,20 @@ const Footer = () => {
             <button className="nav-font-size text-secondary fw-bold foot-btn">Sales Solutions</button>
             <button className="nav-font-size text-secondary fw-bold foot-btn">Centro sicurezza</button>
           </Col>
-          <Col xl={2} className="d-flex flex-column align-items-start gap-2 ">
+          <Col xl={2} className="d-flex flex-column align-items-start gap-2 p-0 ">
             <button className="nav-font-size text-secondary fw-bold foot-btn">Accessibilità</button>
             <button className="nav-font-size text-secondary fw-bold foot-btn">Carriera</button>
             <button className="nav-font-size text-secondary fw-bold foot-btn text-start">Opzioni per gli anunci pubblicitari </button>
             <button className="nav-font-size text-secondary fw-bold foot-btn">Mobile</button>
           </Col>
-          <Col xl={2} className="d-flex flex-column align-items-start gap-2 ">
+          <Col xl={2} className="d-flex flex-column align-items-start gap-2 p-0">
             <button className="nav-font-size text-secondary fw-bold foot-btn">Talent solutions</button>
             <button className="nav-font-size text-secondary fw-bold foot-btn">Soluzioni di marketing</button>
             <button className="nav-font-size text-secondary fw-bold foot-btn">Pubblicità </button>
             <button className="nav-font-size text-secondary fw-bold foot-btn">Piccole imprese</button>
           </Col>
           {/* footer icons */}
-          <Col xl={3} className="d-flex flex-column align-items-start gap-2 ">
+          <Col xl={3} className="d-flex flex-column align-items-start gap-2 p-0">
             <div className="d-flex gap-2 align-items-start">
               <AiFillQuestionCircle className="fs-4" />
               <div className="d-flex align-items-start flex-column gap-1">
@@ -53,15 +53,14 @@ const Footer = () => {
               </div>
             </div>
           </Col>
-          <Col xl={3}>
+          <Col xl={2} className="p-0">
             <div className="d-flex align-items-start flex-column gap-1">
               <span className="text-muted foot-font-size text-secondary">Seleziona lingua</span>
-              <Dropdown data-bs-theme="white" className="bg-white border rounded-2 text-secondary nav-font-size " style={{ width: "282px", height: "32px" }}>
+              <Dropdown data-bs-theme="white" className="w-100 bg-white border rounded-2 text-secondary nav-font-size ">
                 <Dropdown.Toggle
                   id="dropdown-button-white"
                   variant="white"
-                  className="bg-white rounded-2 text-secondary nav-font-size text-start language"
-                  style={{ width: "282px", height: "32px" }}
+                  className="w-100 bg-white border border-2 border-dark rounded-2 text-secondary nav-font-size text-start language"
                 >
                   Sgegli lingua{""}
                 </Dropdown.Toggle>
@@ -105,9 +104,9 @@ const Footer = () => {
       </Container>
 
       <Container>
-        <Row className="mt-3 ">
+        <Row className="my-4 ">
           <Col>
-            <p className="nav-font-size text-secondary">LinkedIn Corporation &copy; 2025</p>
+            <p className="nav-font-size text-secondary ps-2">LinkedIn Corporation &copy; 2025</p>
           </Col>
         </Row>
       </Container>

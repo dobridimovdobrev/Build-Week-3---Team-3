@@ -12,7 +12,7 @@ const Sidebar = () => {
                 <h5>Lingua del profilo</h5>
                 <p className="text-muted">Italiano</p>
               </div>
-              <button className="d-flex flex-column">
+              <button className="d-flex">
                 <BsPencil className="fs-5" />
               </button>
             </div>
@@ -24,7 +24,7 @@ const Sidebar = () => {
                 <h5>Profilo pubblico e URL</h5>
                 <p className="text-muted">www.linkedin.com/in/dobri-dimov-dobrev-34bb95296</p>
               </div>
-              <button className="d-flex flex-column">
+              <button className="d-flex">
                 <BsPencil className="fs-5" />
               </button>
             </div>

@@ -1,4 +1,5 @@
 import Profile from "../components/Profile";
+import ExperiencesList from "../components/ExperiencesList";
 import Sidebar from "../components/Sidebar";
 import { Container, Row, Col } from "react-bootstrap";
 import SideConsulted from "../components/SideConsulted";
