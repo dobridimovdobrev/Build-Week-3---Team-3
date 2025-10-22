@@ -93,3 +93,7 @@ button {
   border-color: #000 !important;
   border: 2px solid !important;
 }
+
+.showall-btn:hover {
+  background-color: #f3f3f3;
+}

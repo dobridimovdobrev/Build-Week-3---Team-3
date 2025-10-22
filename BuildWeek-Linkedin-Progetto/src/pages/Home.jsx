@@ -1,6 +1,8 @@
 import Profile from "../components/Profile";
 import Sidebar from "../components/Sidebar";
 import { Container, Row, Col } from "react-bootstrap";
+import SideConsulted from "../components/SideConsulted";
+import KnownUsers from "../components/KnownUsers";
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
         {/* sidebar */}
         <Col className="p-1" lg={4}>
           <Sidebar />
+          <SideConsulted />
+          <KnownUsers />
         </Col>
       </Row>
     </Container>

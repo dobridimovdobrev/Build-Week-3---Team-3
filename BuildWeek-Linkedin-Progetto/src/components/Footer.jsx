@@ -35,21 +35,21 @@ const Footer = () => {
               <AiFillQuestionCircle className="fs-4" />
               <div className="d-flex align-items-start flex-column gap-1">
                 <button className="foot-font-size foot-btn text-secondary fw-bold p-0">Domande ?</button>
-                <span className="foot-font-size text-secondary">Visita il nostro Centro assistenza.</span>
+                <span className="nav-font-size text-secondary">Visita il nostro Centro assistenza.</span>
               </div>
             </div>
             <div className="d-flex gap-2 align-items-start">
               <IoSettingsSharp className="fs-4" />
               <div className="d-flex align-items-start flex-column gap-1">
                 <button className="foot-font-size foot-btn text-secondary fw-bold p-0">Gestisci il tuo account e la tua priacy</button>
-                <span className="foot-font-size text-secondary">Vai alle impostazioni</span>
+                <span className="nav-font-size text-secondary">Vai alle impostazioni</span>
               </div>
             </div>
             <div className="d-flex gap-2 align-items-start">
               <IoShieldHalf className="fs-4" />
               <div className="d-flex align-items-start flex-column gap-1">
                 <button className="foot-font-size foot-btn text-secondary fw-bold p-0">Trasparenza sui contenuti consigliati</button>
-                <span className="foot-font-size text-secondary">Scopri di più sui contenuti consigliati.</span>
+                <span className="nav-font-size text-secondary">Scopri di più sui contenuti consigliati.</span>
               </div>
             </div>
           </Col>
