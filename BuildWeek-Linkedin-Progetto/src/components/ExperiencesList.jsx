@@ -22,7 +22,6 @@ const ExperiencesList = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log("Questo e data:", data);
         setExperiences(data);
       } else {
         throw new Error("Fetch experience list failed");
@@ -34,7 +33,8 @@ const ExperiencesList = () => {
 
   useEffect(() => {
     ExperienceListApi();
-    console.log(experiences);
+  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

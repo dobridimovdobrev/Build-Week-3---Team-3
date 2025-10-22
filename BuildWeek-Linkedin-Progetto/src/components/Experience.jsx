@@ -1,6 +1,6 @@
 const Experience = ({experience}) => {
 
-  console.log( "questo e experince", experience);
+/*   console.log( "questo e experince", experience); */
   return (
     <>
       <div className="d-flex">
