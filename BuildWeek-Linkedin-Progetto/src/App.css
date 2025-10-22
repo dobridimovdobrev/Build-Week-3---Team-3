@@ -77,7 +77,25 @@ button{
 }
 
 .custom-width{
-  max-width: 24rem;
+  max-width: 320px;
 }
 
 
+.foot-font-size {
+  font-size: 14px;
+}
+
+.foot-btn:hover {
+  text-decoration: underline;
+  text-decoration-color: #0a6ffd;
+  color: #0a6ffd !important;
+}
+
+.language:hover {
+  border-color: #000 !important;
+  border: 2px solid !important;
+}
+
+.dropdown-menu{
+  width: 100% !important;
+}

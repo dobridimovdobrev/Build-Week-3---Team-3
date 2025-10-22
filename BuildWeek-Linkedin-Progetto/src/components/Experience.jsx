@@ -1,31 +1,29 @@
-const Experience = () => {
+const Experience = ({experience}) => {
+
+  console.log( "questo e experince", experience);
   return (
     <>
       <div className="d-flex">
         <div className="me-3">
-          <svg
-            width="48"
-            height="48"
-            display="var(--hue-web-svg-display-light)"
-          >
-            <image
-              href="https://static.licdn.com/aero-v1/sc/h/p4pvtlgggtwlz9lht17nvnqq"
+        
+            <img
+              src={experience.image}
               x="0"
               y="0"
               width="48"
               height="48"
-            ></image>
-          </svg>
+            />
+          
         </div>
         <div className="d-flex flex-column flex-grow-1">
-          <h6 className="m-0">Sviluppo professionale</h6>
-          <p className="custom-font">Pausa lavorativa</p>
+          <h6 className="m-0">{experience.company}</h6>
+          <p className="custom-font">{experience.role}</p>
           <span className="text-muted custom-font">
-            nov 2023 - Presente - 2 anni
+            {`${new Date(experience.startDate).toLocaleDateString()} - ${new Date(experience.endDate).toLocaleDateString()}`}
           </span>
-          <span className="text-muted custom-font">Forli, Emilia-Romagna</span>
+          <span className="text-muted custom-font">{experience.area}</span>
           <p className="mt-3 custom-font">
-            Corso Programmatore Full Stack Web Developer Academia Code
+            {experience.description}
           </p>
         </div>
       </div>

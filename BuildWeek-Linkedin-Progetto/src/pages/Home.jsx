@@ -8,16 +8,18 @@ const Home = () => {
     <Container>
       <Row className="g-0">
         {/* main content */}
-        <Col className="p-1" lg={8}>
-          <main>
-            <Profile />
-            <ExperiencesList />
-          </main>
-        </Col>
-        {/* sidebar */}
-        <Col className="p-1" lg={4}>
-          <Sidebar />
-        </Col>
+        <div className="d-flex gap-3">
+          <Col className="p-1" lg={8}>
+            <main>
+              <Profile />
+              <ExperiencesList />
+            </main>
+          </Col>
+          {/* sidebar */}
+          <Col className="p-1 custom-width" lg={4}>
+            <Sidebar />
+          </Col>
+        </div>
       </Row>
     </Container>
   );
