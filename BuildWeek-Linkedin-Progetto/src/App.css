@@ -167,3 +167,8 @@ button {
   background-color: #f4f2ee;
   border-radius: 50%;
 }
+
+/* active class bootstrap */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--bs-blue);
+}

@@ -5,6 +5,8 @@ import Advertising from "../components/Advertising";
 import LinkedNews from "../components/LinkedNews";
 import PostLinkedin from "../components/PostLinkedin";
 import AdvisedProfile from "../components/AdvisedProfile";
+import PostList from "../components/PostsList";
+
 
 const Home = () => {
   return (
