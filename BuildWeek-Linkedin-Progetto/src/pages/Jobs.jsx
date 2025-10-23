@@ -1,0 +1,31 @@
+import { Container, Row, Col } from "react-bootstrap";
+import SideConsulted from "../components/SideConsulted";
+import KnownUsers from "../components/KnownUsers";
+import MainProfile from "../components/MainProfile";
+import MainPostCreator from "../components/MainPostCreator";
+import Advertising from "../components/Advertising";
+
+
+const Jobs = () => {
+  return (
+    <Container>
+      <Row className="g-0 ">
+        {/* main content */}
+        <Col className="p-1 left-sidebar-width" lg={3}>
+          <MainProfile />
+        </Col>
+        <Col className="p-1" lg={6}>
+          <MainPostCreator />
+        </Col>
+        {/* sidebar */}
+        <Col className="p-1" lg={3}>
+          <SideConsulted />
+          <Advertising />
+          <KnownUsers />
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Jobs;
