@@ -162,3 +162,9 @@ button {
 .home-post-button:hover {
   background-color: #f4f2ee;
 }
+
+
+/* active class bootstrap */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--bs-blue);
+}

@@ -4,6 +4,7 @@ import KnownUsers from "../components/KnownUsers";
 import MainProfile from "../components/MainProfile";
 import MainPostCreator from "../components/MainPostCreator";
 import Advertising from "../components/Advertising";
+import PostList from "../components/PostsList";
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
         </Col>
         <Col className="p-1" lg={6}>
           <MainPostCreator />
+          <PostList />
         </Col>
         {/* sidebar */}
         <Col className="p-1" lg={3}>
