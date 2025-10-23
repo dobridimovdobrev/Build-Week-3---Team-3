@@ -4,7 +4,6 @@ import KnownUsers from "../components/KnownUsers";
 import MainProfile from "../components/MainProfile";
 import MainPostCreator from "../components/MainPostCreator";
 import Advertising from "../components/Advertising";
-import Sidebar from "../components/Sidebar";
 
 const Home = () => {
   return (
