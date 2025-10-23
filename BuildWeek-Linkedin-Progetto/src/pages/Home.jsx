@@ -1,9 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
-import SideConsulted from "../components/SideConsulted";
-import KnownUsers from "../components/KnownUsers";
 import MainProfile from "../components/MainProfile";
 import MainPostCreator from "../components/MainPostCreator";
 import Advertising from "../components/Advertising";
+import LinkedNews from "../components/LinkedNews";
+import PostLinkedin from "../components/PostLinkedin";
+import AdvisedProfile from "../components/AdvisedProfile";
 
 const Home = () => {
   return (
@@ -15,12 +16,13 @@ const Home = () => {
         </Col>
         <Col className="p-1" lg={6}>
           <MainPostCreator />
+          <AdvisedProfile />
+          <PostLinkedin />
         </Col>
         {/* sidebar */}
         <Col className="p-1" lg={3}>
-          <SideConsulted />
+          <LinkedNews />
           <Advertising />
-          <KnownUsers />
         </Col>
       </Row>
     </Container>

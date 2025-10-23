@@ -162,3 +162,8 @@ button {
 .home-post-button:hover {
   background-color: #f4f2ee;
 }
+
+.rounded-display:hover {
+  background-color: #f4f2ee;
+  border-radius: 50%;
+}
