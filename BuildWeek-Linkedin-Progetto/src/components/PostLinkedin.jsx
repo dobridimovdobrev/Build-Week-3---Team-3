@@ -31,7 +31,7 @@ const PostLinkedin = () => {
                         <span className="text-muted">Role</span>
                       </div>
                       <div className="m-3">
-                        <h6>Title</h6>
+                        <h6>Title post</h6>
                         <p className="text-muted">Text</p>
                         <p className="text-muted">Image</p>
                       </div>
