@@ -79,6 +79,9 @@ button {
 .custom-width {
   max-width: 320px;
 }
+.left-sidebar-width {
+  max-width: 270px;
+}
 
 .foot-font-size {
   font-size: 14px;
@@ -100,4 +103,21 @@ button {
 }
 .dropdown-menu {
   width: 100% !important;
+}
+/* home */
+
+.home-profile-img-absolute {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+}
+
+.home-profile-button {
+  border: dotted;
+  background-color: #f4f2ee;
+}
+
+.home-profile-button:hover {
+  background-color: #dfdedb;
+  border: 2px dotted;
 }

@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, NavLink } from "react-bootstrap";
 import { BsPencil } from "react-icons/bs";
 import { LiaSchoolSolid } from "react-icons/lia";
 import { MdOutlineVerifiedUser } from "react-icons/md";
@@ -37,7 +37,9 @@ const Profile = () => {
         <Row className=" mt-5">
           <Col lg={8}>
             <div className="d-flex align-items-center gap-2">
-              <h2 className="fs-4">Dobri Dimov Dobrev</h2>
+              <NavLink to="/">
+                <h2 className="fs-4">Dobri Dimov Dobrev</h2>
+              </NavLink>
               <a className="d-flex  fw-medium text-primary">
                 <MdOutlineVerifiedUser className="fs-6" />
                 <span>Aggiungi badge di verifica</span>
@@ -66,18 +68,10 @@ const Profile = () => {
       <Container>
         <Row>
           <Col className="d-flex gap-3 my-4">
-            <button className="text-bg-primary rounded-5 fw-medium py-1 px-3">
-              Disponibile per
-            </button>
-            <button className="btn btn-outline-primary rounded-5 fw-medium">
-              Aggiungi sezioni del profilo
-            </button>
-            <button className="btn btn-outline-primary rounded-5 fw-medium">
-              Migliora profilo
-            </button>
-            <button className="btn btn-outline-dark rounded-5 fw-medium px-4">
-              Risorse
-            </button>
+            <button className="text-bg-primary rounded-5 fw-medium py-1 px-3">Disponibile per</button>
+            <button className="btn btn-outline-primary rounded-5 fw-medium">Aggiungi sezioni del profilo</button>
+            <button className="btn btn-outline-primary rounded-5 fw-medium">Migliora profilo</button>
+            <button className="btn btn-outline-dark rounded-5 fw-medium px-4">Risorse</button>
           </Col>
         </Row>
       </Container>
@@ -88,12 +82,8 @@ const Profile = () => {
             <div className="d-flex position-relative profile-card-color rounded-2 px-2 ">
               {/* profile card info */}
               <a href="#" className="d-inline-block position-relative my-3">
-                <span className="fw-medium text-dark">
-                  Disponibile a lavorare
-                </span>
-                <span className="d-block profile-card-font text-dark">
-                  Ruoli di Tecnico informatico e Sviluppatore Wordpress
-                </span>
+                <span className="fw-medium text-dark">Disponibile a lavorare</span>
+                <span className="d-block profile-card-font text-dark">Ruoli di Tecnico informatico e Sviluppatore Wordpress</span>
                 <span className="d-block">Mostra dettagli</span>
               </a>
               {/* profile-card-button */}
@@ -106,12 +96,8 @@ const Profile = () => {
             <div className="d-flex position-relative profile-card-color rounded-2 px-2 ">
               {/* profile card info */}
               <a href="#" className="d-inline-block position-relative my-3">
-                <span className="fw-medium text-dark">
-                  Disponibile a lavorare
-                </span>
-                <span className="d-block profile-card-font text-dark">
-                  Ruoli di Tecnico informatico e Sviluppatore Wordpress
-                </span>
+                <span className="fw-medium text-dark">Disponibile a lavorare</span>
+                <span className="d-block profile-card-font text-dark">Ruoli di Tecnico informatico e Sviluppatore Wordpress</span>
                 <span className="d-block">Mostra dettagli</span>
               </a>
               {/* profile-card-button */}
