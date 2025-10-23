@@ -5,7 +5,7 @@ const AdvisedProfile = () => {
   return (
     <Container>
       <Row>
-        <Col className="mt-4 p-0">
+        <Col className="mt-3 p-0">
           <div className="bg-white rounded-2 border">
             {/* Known users */}
             <div className="d-flex flex-column justify-content-between px-3 py-3">

@@ -10,7 +10,7 @@ const PostLinkedin = () => {
   return (
     <Container>
       <Row>
-        <Col className="mt-4 p-0">
+        <Col className="mt-3 p-0">
           <div className="bg-white  rounded-2 border">
             {/* Posts users */}
             <div className="d-flex flex-column justify-content-between px-3 py-3">
@@ -43,10 +43,6 @@ const PostLinkedin = () => {
                         <AiOutlineClose className="mt-2 mx-1" />
                       </button>
                     </div>
-                    <button className="btn btn-outline-primary rounded-5 fw-medium px-4 m-start my-auto w-auto ">
-                      <HiUserAdd className="mb-1 me-1" />
-                      Segui
-                    </button>
                   </div>
                 </div>
               </div>

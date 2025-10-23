@@ -5,7 +5,7 @@ import { HiOutlineNewspaper } from "react-icons/hi2";
 
 const MainPostCreator = () => {
   return (
-    <Container className="bg-white rounded-3 my-4">
+    <Container className="bg-white rounded-3 mt-4">
       {/* post creation */}
       <Row className="align-items-baseline" style={{ maxHeight: "66px" }}>
         <Col xl={1} className="d-flex p-3">
