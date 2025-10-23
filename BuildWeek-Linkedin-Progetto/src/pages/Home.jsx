@@ -18,8 +18,7 @@ const Home = () => {
           <MainPostCreator />
         </Col>
         {/* sidebar */}
-        <Col className="p-1 custom-width" lg={3}>
-          <Sidebar />
+        <Col className="p-1" lg={3}>
           <SideConsulted />
           <Advertising />
           <KnownUsers />

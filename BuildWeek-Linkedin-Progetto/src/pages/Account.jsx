@@ -9,7 +9,7 @@ import Advertising from "../components/Advertising";
 const Account = () => {
   return (
     <Container>
-      <Row className="g-0">
+      <Row className="gap-3">
         {/* main content */}
         <Col className="p-1" lg={8}>
           <Profile />

@@ -104,7 +104,45 @@ button {
 .dropdown-menu {
   width: 100% !important;
 }
-/* home */
+
+.accordion-collapse {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-button {
+  transition: all 0.5s ease;
+}
+
+.accordion-body {
+  animation: fadeIn 0.5s ease;
+  padding-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-align-top {
+  vertical-align: top;
+  position: relative;
+  top: -2px;
+}
+
+.icon-align-middle {
+  vertical-align: middle;
+}
+
+.icon-align-super {
+  vertical-align: super;
+  font-size: 0.8em;
+}
 
 .home-profile-img-absolute {
   position: absolute;
