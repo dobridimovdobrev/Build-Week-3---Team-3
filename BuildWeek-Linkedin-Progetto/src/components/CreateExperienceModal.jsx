@@ -3,12 +3,75 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { BsPlusLg } from "react-icons/bs";
+import Alert from "react-bootstrap/Alert";
+import { Container } from "react-bootstrap";
 
 const CreateExperienceModal = (props) => {
+  const [showAlert, setShowAlert] = useState(false);
+
   const [show, setShow] = useState(false);
+
+  const userId = "68f6048d6dfc200015d39891";
+  const url = `https://striveschool-api.herokuapp.com/api/profile/${userId}/experiences`;
+  const apiKey = import.meta.env.VITE_LINKEDIN_KEY;
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    createExperienceApi();
+  };
+
+  const [formInputData, setFormInputData] = useState({
+    role: "",
+    company: "",
+    startDate: "",
+    endDate: "",
+    description: "",
+    area: "",
+    image: "",
+  });
+
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setFormInputData({ ...formInputData, [name]: value });
+  };
+
+  const createExperienceApi = async () => {
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify(formInputData),
+      });
+
+      if (response.ok) {
+        /* const data = await response.json(); */
+        setShowAlert(true);
+        setFormInputData({
+          role: "",
+          company: "",
+          startDate: "",
+          endDate: "",
+          description: "",
+          area: "",
+          image: "",
+        });
+
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 3000);
+      } else {
+        throw new Error("Create experience failed");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -25,14 +88,19 @@ const CreateExperienceModal = (props) => {
         show={show}
         onHide={handleClose}
       >
-        {/* experience head title */}
-        <Modal.Header closeButton>
-          <Modal.Title>Aggiungi esperienza</Modal.Title>
-        </Modal.Header>
-        {/* experience content */}
-        <Modal.Body>
-          {/* Form */}
-          <Form>
+        {/* Form */}
+        <Form onSubmit={handleSubmit}>
+          {/* experience head title */}
+          <Modal.Header className="border-0" closeButton>
+            <Modal.Title>Aggiungi esperienza</Modal.Title>
+          </Modal.Header>
+          {showAlert && (
+            <Container className="mt-2">
+              <Alert variant="success">Esperienza creata con successo!</Alert>
+            </Container>
+          )}
+          {/* experience content */}
+          <Modal.Body>
             {/*Role */}
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className="text-muted custom-font">
@@ -42,6 +110,9 @@ const CreateExperienceModal = (props) => {
                 type="text"
                 placeholder="Esempio: Retail Sales Manager"
                 autoFocus
+                name="role"
+                value={formInputData.role}
+                onChange={handleInput}
               />
             </Form.Group>
             {/* Company*/}
@@ -53,25 +124,40 @@ const CreateExperienceModal = (props) => {
                 type="text"
                 placeholder="Esempio: Microsoft"
                 autoFocus
+                name="company"
+                value={formInputData.company}
+                onChange={handleInput}
               />
             </Form.Group>
             <Form.Group
               className="d-flex gap-3 mb-3"
               controlId="exampleForm.ControlInput1"
-              >
+            >
               {/* start date */}
-              <div  className="w-100">
+              <div className="w-100">
                 <Form.Label className="text-muted custom-font">
                   Data inizio
                 </Form.Label>
-                <Form.Control type="date" autoFocus />
+                <Form.Control
+                  type="date"
+                  autoFocus
+                  name="startDate"
+                  value={formInputData.startDate}
+                  onChange={handleInput}
+                />
               </div>
               {/* end date */}
               <div className="w-100">
                 <Form.Label className="text-muted custom-font">
                   Data fine
                 </Form.Label>
-                <Form.Control type="date" autoFocus />
+                <Form.Control
+                  type="date"
+                  autoFocus
+                  name="endDate"
+                  value={formInputData.endDate}
+                  onChange={handleInput}
+                />
               </div>
             </Form.Group>
 
@@ -87,6 +173,9 @@ const CreateExperienceModal = (props) => {
                 as="textarea"
                 rows={3}
                 placeholder="Inserisci testo ..."
+                name="description"
+                value={formInputData.description}
+                onChange={handleInput}
               />
             </Form.Group>
             {/* Area City*/}
@@ -98,20 +187,30 @@ const CreateExperienceModal = (props) => {
                 type="text"
                 placeholder="Esempio: Rimini"
                 autoFocus
+                name="area"
+                value={formInputData.area}
+                onChange={handleInput}
               />
             </Form.Group>
             {/* Upload image */}
             <Form.Group controlId="formFile" className="mb-3">
-              <Form.Label className="text-muted custom-font">Carica immagine *</Form.Label>
-              <Form.Control type="file" />
+              <Form.Label className="text-muted custom-font">
+                Carica immagine *
+              </Form.Label>
+              <Form.Control
+                type="text"
+                name="image"
+                value={formInputData.image}
+                onChange={handleInput}
+              />
             </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Aggiungi
-          </Button>
-        </Modal.Footer>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button type="submit" variant="primary">
+              Aggiungi
+            </Button>
+          </Modal.Footer>
+        </Form>
       </Modal>
     </>
   );

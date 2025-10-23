@@ -29,7 +29,7 @@ const ExperiencesList = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   useEffect(() => {
     ExperienceListApi();
