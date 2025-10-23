@@ -3,7 +3,7 @@ import { HiUserAdd } from "react-icons/hi";
 
 const KnownUsers = () => {
   return (
-    <Container className="custom-width">
+    <Container>
       <Row>
         <Col className="mt-4 p-0">
           <div className="bg-white rounded-2 border">

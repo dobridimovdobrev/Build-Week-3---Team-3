@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BsPencil } from "react-icons/bs";
 const Sidebar = () => {
   return (
-    <Container className="custom-width">
+    <Container>
       <Row>
         <Col className="mt-4 p-0">
           <div className="bg-white rounded-2">

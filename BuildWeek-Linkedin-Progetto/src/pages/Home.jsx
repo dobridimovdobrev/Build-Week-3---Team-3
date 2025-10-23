@@ -15,7 +15,7 @@ const Home = () => {
           <ExperiencesList />
         </Col>
         {/* sidebar */}
-        <Col className="p-1" lg={4}>
+        <Col className="p-1 custom-width" lg={4}>
           <Sidebar />
           <SideConsulted />
           <KnownUsers />
