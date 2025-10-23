@@ -3,7 +3,7 @@ import { MdOutlineVerifiedUser } from "react-icons/md";
 import { AiOutlinePlus } from "react-icons/ai";
 const MainProfile = () => {
   return (
-    <Container className="bg-white rounded-bottom-3 my-4">
+    <Container className="bg-white rounded-bottom-3 mt-4">
       <Row>
         <Col className="position-relative p-0">
           <img

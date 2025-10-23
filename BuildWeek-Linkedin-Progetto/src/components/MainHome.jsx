@@ -1,4 +1,3 @@
-import ExperiencesList from "../components/ExperiencesList";
 import Sidebar from "../components/Sidebar";
 import { Container, Row, Col } from "react-bootstrap";
 import SideConsulted from "../components/SideConsulted";
@@ -9,7 +8,7 @@ import MainPostCreator from "./MainPostCreator";
 const MainHome = () => {
   return (
     <Container>
-      <Row className="g-0 d-flex align-items-baseline">
+      <Row className="g-0 ">
         {/* main content */}
         <Col className="p-1 left-sidebar-width" lg={3}>
           <MainProfile />
