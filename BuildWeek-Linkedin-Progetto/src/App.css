@@ -135,3 +135,23 @@ button {
   vertical-align: super;
   font-size: 0.8em;
 }
+
+
+.home-profile-img-absolute {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+}
+
+.home-profile-button {
+  border: dotted;
+  background-color: #f4f2ee;
+}
+
+.home-profile-button:hover {
+  background-color: #dfdedb;
+  border: 2px dotted;
+}
+.home-post-button:hover {
+  background-color: #f4f2ee;
+}
