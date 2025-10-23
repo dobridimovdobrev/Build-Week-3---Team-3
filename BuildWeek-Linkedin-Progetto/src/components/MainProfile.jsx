@@ -24,7 +24,7 @@ const MainProfile = () => {
         <Row className=" mt-5 w-100">
           <Col>
             <div className="d-flex gap-2">
-              <NavLink to="/">
+              <NavLink>
                 <h6>
                   Dobri Dimov Dobrev
                   <MdOutlineVerifiedUser className="fs-5 ms-1" />
