@@ -29,19 +29,19 @@ const MainPostCreator = () => {
       <Row className="justify-content-evenly align-items-baseline" style={{ maxHeight: "66px" }}>
         <Col xl={11} className="d-flex ">
           <Col xl={4} className=" p-2">
-            <button className="home-post-button rounded-2 py-3">
+            <button className="home-post-button rounded-2 py-2">
               <IoLogoYoutube className="fs-4 text-success me-1 mb-1" />
               Video
             </button>
           </Col>
           <Col xl={4} className=" p-2">
-            <button className="home-post-button rounded-2 py-3">
+            <button className="home-post-button rounded-2 py-2">
               <HiOutlinePhoto className="fs-4 text-primary me-1 mb-1" />
               Foto
             </button>
           </Col>
           <Col xl={4} className=" p-2">
-            <button className="home-post-button rounded-2 py-3">
+            <button className="home-post-button rounded-2 py-2">
               <HiOutlineNewspaper className="fs-4 text-danger-emphasis me-1 mb-1" />
               Scrivi un articolo
             </button>
