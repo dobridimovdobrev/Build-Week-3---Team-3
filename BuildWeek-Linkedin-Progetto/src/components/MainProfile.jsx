@@ -23,10 +23,12 @@ const MainProfile = () => {
       <Container className="position-relative">
         <Row className=" mt-5 w-100">
           <Col>
-            <div className="align-items-center gap-2">
+            <div className="d-flex gap-2">
               <NavLink to="/">
-                <h6>Dobri Dimov Dobrev</h6>
-                <MdOutlineVerifiedUser className="fs-5" />
+                <h6>
+                  Dobri Dimov Dobrev
+                  <MdOutlineVerifiedUser className="fs-5 ms-1" />
+                </h6>
               </NavLink>
             </div>
             <div className="mb-2">

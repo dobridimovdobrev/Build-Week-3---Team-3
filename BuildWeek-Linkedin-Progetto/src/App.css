@@ -121,3 +121,6 @@ button {
   background-color: #dfdedb;
   border: 2px dotted;
 }
+.home-post-button:hover {
+  background-color: #f4f2ee;
+}
