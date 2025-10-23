@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BiSearch } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
+import { RiArrowDropDownFill } from 'react-icons/ri';
 
 function Navigation() {
   return (
@@ -30,7 +31,7 @@ function Navigation() {
               {/* search icon */}
             </div>
             {/* Menu items */}
-            <Nav.Link to="/" className="d-flex flex-column justify-content-center align-items-center margin-custom">
+            <NavLink to="/" className="d-flex flex-column justify-content-center align-items-center margin-custom">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -43,7 +44,7 @@ function Navigation() {
                 <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7z"></path>
               </svg>
               Home
-            </Nav.Link>
+            </NavLink>
             <Nav.Link className="d-flex flex-column justify-content-center align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +59,7 @@ function Navigation() {
               </svg>
               Rete
             </Nav.Link>
-            <Nav.Link className="d-flex flex-column align-items-center">
+            <NavLink to="/jobs" className="d-flex flex-column align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -71,7 +72,7 @@ function Navigation() {
                 <path d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z"></path>
               </svg>
               Lavoro
-            </Nav.Link>
+            </NavLink>
             <Nav.Link className="d-flex flex-column align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +101,7 @@ function Navigation() {
               </svg>
               Notifiche
             </Nav.Link>
-            <div className="d-flex justify-content-center flex-column align-items-center px-2">
+            <NavLink to="/account" className="d-flex justify-content-center flex-column align-items-center">
               <img
                 width="24"
                 className="rounded-5"
@@ -108,14 +109,11 @@ function Navigation() {
                 height="24"
                 alt="Dobri Dimov Dobrev"
               ></img>
-              <NavDropdown title="Tu" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
-            </div>
+              <div className="d-flex align-items-center">
+                <span>Tu</span>
+                 <RiArrowDropDownFill className="fs-4"/>
+              </div>
+            </NavLink>
             {/* vertical line */}
             <div className="vr"></div>
             <div className="d-flex justify-content-center flex-column align-items-center px-2">

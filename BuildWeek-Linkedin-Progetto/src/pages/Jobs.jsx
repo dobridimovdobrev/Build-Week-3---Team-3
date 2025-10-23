@@ -6,7 +6,7 @@ import MainPostCreator from "../components/MainPostCreator";
 import Advertising from "../components/Advertising";
 
 
-const Home = () => {
+const Jobs = () => {
   return (
     <Container>
       <Row className="g-0 ">
@@ -28,4 +28,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Jobs;
