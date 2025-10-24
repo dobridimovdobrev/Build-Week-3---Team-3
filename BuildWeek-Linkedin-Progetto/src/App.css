@@ -167,3 +167,9 @@ button {
   background-color: #f4f2ee;
   border-radius: 50%;
 }
+
+.connection-link:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+  color: black !important;
+}

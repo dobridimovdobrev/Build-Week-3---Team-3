@@ -5,6 +5,8 @@ import Advertising from "../components/Advertising";
 import LinkedNews from "../components/LinkedNews";
 import PostLinkedin from "../components/PostLinkedin";
 import AdvisedProfile from "../components/AdvisedProfile";
+import Connections from "../components/Connections";
+import ProfileOptions from "../components/ProfileOptions";
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
         {/* main content */}
         <Col className="p-1 left-sidebar-width" lg={3}>
           <MainProfile />
+          <Connections />
+          <ProfileOptions />
         </Col>
         <Col className="p-1" lg={6}>
           <MainPostCreator />
