@@ -8,6 +8,7 @@ import { createPost } from "../api/postsApi";
 const MainPostCreator = ({ onPostCreated }) => {
   const [showModal, setShowModal] = useState(false);
   const [postText, setPostText] = useState("");
+  const [postImage, setPostImage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
@@ -15,6 +16,7 @@ const MainPostCreator = ({ onPostCreated }) => {
   const handleOpenModal = () => {
     setShowModal(true);
     setPostText("");
+    setPostImage("");
     setError(null);
     setSuccess(false);
   };
@@ -34,10 +36,15 @@ const MainPostCreator = ({ onPostCreated }) => {
       setIsSubmitting(true);
       setError(null);
       
-      const newPost = await createPost({ text: postText });
+      const newPost = await createPost({ 
+        text: postText,
+        image: postImage,
+        username: "Dobri Dobrev"
+      });
       
       setSuccess(true);
       setPostText("");
+      setPostImage("");
       
       if (onPostCreated) {
         onPostCreated(newPost);
@@ -125,6 +132,29 @@ const MainPostCreator = ({ onPostCreated }) => {
                 onChange={(e) => setPostText(e.target.value)}
                 disabled={isSubmitting}
               />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>URL Immagine</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Inserisci l'URL dell'immagine"
+                value={postImage}
+                onChange={(e) => setPostImage(e.target.value)}
+                disabled={isSubmitting}
+              />
+              {postImage && (
+                <div className="mt-2">
+                  <img 
+                    src={postImage} 
+                    alt="Anteprima" 
+                    style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain' }} 
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://via.placeholder.com/400x200?text=Immagine+non+valida';
+                    }}
+                  />
+                </div>
+              )}
             </Form.Group>
             <div className="d-flex justify-content-end">
               <Button 

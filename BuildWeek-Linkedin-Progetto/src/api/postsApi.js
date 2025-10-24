@@ -56,7 +56,11 @@ export const createPost = async (postData) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({ text: postData.text }),
+      body: JSON.stringify({ 
+        text: postData.text,
+        image: postData.image,
+        username: postData.username || "Dobri Dobrev"
+      }),
     });
 
     if (response.ok) {
