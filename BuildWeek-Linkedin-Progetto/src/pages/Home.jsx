@@ -7,6 +7,7 @@ import PostLinkedin from "../components/PostLinkedin";
 import AdvisedProfile from "../components/AdvisedProfile";
 import Connections from "../components/Connections";
 import ProfileOptions from "../components/ProfileOptions";
+import PostList from "../components/PostsList";
 
 const Home = () => {
   return (

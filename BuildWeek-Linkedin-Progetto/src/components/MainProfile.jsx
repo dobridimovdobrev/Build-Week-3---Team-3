@@ -37,10 +37,12 @@ const MainProfile = () => {
             <div className="d-flex gap-2 mb-2">
               <span className="grey custom-font">Forlì, Emilia Romagna, Italia</span>
             </div>
+            
             <button className="w-100 rounded-2 text-secondary home-profile-button mb-2">
               <AiOutlinePlus className="mb-1 me-1" />
               Esperienza
             </button>
+            
           </Col>
         </Row>
       </Container>

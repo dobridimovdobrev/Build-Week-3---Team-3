@@ -173,3 +173,7 @@ button {
   text-decoration-color: black;
   color: black !important;
 }
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--bs-blue);
+}
