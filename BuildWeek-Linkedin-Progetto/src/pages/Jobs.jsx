@@ -7,9 +7,9 @@ import ProfileOptions from "../components/ProfileOptions";
 const Jobs = () => {
   return (
     <Container>
-      <Row className="g-0 ">
-        {/* main content */}
-        <Col className="p-1 " lg={3}>
+      <Row className="gap-3 ">
+        {/* job content */}
+        <Col className="p-1 left-sidebar-width " lg={3}>
           <MainProfile />
           <Connections />
           <ProfileOptions />

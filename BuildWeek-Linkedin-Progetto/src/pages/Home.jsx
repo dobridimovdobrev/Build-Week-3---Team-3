@@ -11,9 +11,9 @@ import ProfileOptions from "../components/ProfileOptions";
 const Home = () => {
   return (
     <Container>
-      <Row className="g-0 ">
+      <Row className="gap-3 ">
         {/* main content */}
-        <Col className="p-1 left-sidebar-width" lg={3}>
+        <Col className="p-1 left-sidebar-width " lg={3}>
           <MainProfile />
           <Connections />
           <ProfileOptions />
