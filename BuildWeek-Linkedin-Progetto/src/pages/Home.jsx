@@ -65,7 +65,7 @@ const Home = () => {
 
         <Col className="p-1" lg={6}>
           <MainPostCreator onPostCreated={handlePostCreated} />
-          <AdvisedProfile />
+          {/* <AdvisedProfile /> */}
 
           {isLoading ? (
             <div className="bg-white rounded-2 border p-4 text-center mt-3">

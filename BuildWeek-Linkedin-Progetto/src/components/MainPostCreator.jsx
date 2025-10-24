@@ -35,21 +35,21 @@ const MainPostCreator = ({ onPostCreated }) => {
     try {
       setIsSubmitting(true);
       setError(null);
-      
-      const newPost = await createPost({ 
+
+      const newPost = await createPost({
         text: postText,
         image: postImage,
-        username: "Dobri Dobrev"
+        username: "Dobri Dobrev",
       });
-      
+
       setSuccess(true);
       setPostText("");
       setPostImage("");
-      
+
       if (onPostCreated) {
         onPostCreated(newPost);
       }
-      
+
       setTimeout(() => {
         handleCloseModal();
         setSuccess(false);
@@ -79,11 +79,11 @@ const MainPostCreator = ({ onPostCreated }) => {
           </Col>
           <Col xl={11} className="d-flex mt-1 p-3 pb-0">
             <div className="input-group">
-              <input 
-                type="text" 
-                className="form-control rounded-pill home-post-button" 
-                style={{ height: "48px" }} 
-                placeholder="Crea un post" 
+              <input
+                type="text"
+                className="form-control rounded-pill home-post-button"
+                style={{ height: "48px" }}
+                placeholder="Crea un post"
                 onClick={handleOpenModal}
                 readOnly
               />
@@ -121,7 +121,7 @@ const MainPostCreator = ({ onPostCreated }) => {
         <Modal.Body>
           {error && <Alert variant="danger">{error}</Alert>}
           {success && <Alert variant="success">Post creato con successo!</Alert>}
-          
+
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
               <Form.Control
@@ -144,24 +144,20 @@ const MainPostCreator = ({ onPostCreated }) => {
               />
               {postImage && (
                 <div className="mt-2">
-                  <img 
-                    src={postImage} 
-                    alt="Anteprima" 
-                    style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain' }} 
+                  <img
+                    src={postImage}
+                    alt="Anteprima"
+                    style={{ maxWidth: "100%", maxHeight: "200px", objectFit: "contain" }}
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = 'https://via.placeholder.com/400x200?text=Immagine+non+valida';
+                      e.target.src = "https://via.placeholder.com/400x200?text=Immagine+non+valida";
                     }}
                   />
                 </div>
               )}
             </Form.Group>
             <div className="d-flex justify-content-end">
-              <Button 
-                variant="primary" 
-                type="submit" 
-                disabled={isSubmitting}
-              >
+              <Button variant="primary" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? "Pubblicazione in corso..." : "Pubblica"}
               </Button>
             </div>

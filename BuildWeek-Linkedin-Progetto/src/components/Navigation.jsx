@@ -5,11 +5,11 @@ import Form from "react-bootstrap/Form";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BiSearch } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
-import { RiArrowDropDownFill } from 'react-icons/ri';
+import { RiArrowDropDownFill } from "react-icons/ri";
 
 function Navigation() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary nav-font-size p-0">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary nav-font-size p-0 sticky-top">
       <Container>
         {/* Nav Logo */}
         <Navbar.Brand className="px-1">
@@ -111,7 +111,7 @@ function Navigation() {
               ></img>
               <div className="d-flex align-items-center">
                 <span>Tu</span>
-                 <RiArrowDropDownFill className="fs-4"/>
+                <RiArrowDropDownFill className="fs-4" />
               </div>
             </NavLink>
             {/* vertical line */}
