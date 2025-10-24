@@ -5,8 +5,9 @@ import MainPostCreator from "../components/MainPostCreator";
 import Advertising from "../components/Advertising";
 import LinkedNews from "../components/LinkedNews";
 import AdvisedProfile from "../components/AdvisedProfile";
+import Connections from "../components/Connections";
+import ProfileOptions from "../components/ProfileOptions";
 import PostList from "../components/PostsList";
-import { getAllPosts } from "../api/postsApi";
 
 const Home = () => {
   const [allPosts, setAllPosts] = useState([]);
@@ -19,11 +20,11 @@ const Home = () => {
     try {
       setIsLoading(true);
       const data = await getAllPosts();
-      
+
       const sortedPosts = [...data].sort((a, b) => {
         return new Date(b.createdAt) - new Date(a.createdAt);
       });
-      
+
       setAllPosts(sortedPosts);
       setVisiblePosts(sortedPosts.slice(0, postsPerPage));
       setError(null);
@@ -37,7 +38,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchPosts();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handlePostCreated = (newPost) => {
@@ -45,7 +46,7 @@ const Home = () => {
     setAllPosts(updatedAllPosts);
     setVisiblePosts(updatedAllPosts.slice(0, postsPerPage));
   };
-  
+
   const loadMorePosts = () => {
     const nextPosts = allPosts.slice(0, visiblePosts.length + postsPerPage);
     setVisiblePosts(nextPosts);
@@ -53,15 +54,18 @@ const Home = () => {
 
   return (
     <Container>
-      <Row className="g-0">
-        <Col className="p-1 left-sidebar-width" lg={3}>
+      <Row className="gap-3 ">
+        {/* main content */}
+        <Col className="p-1 left-sidebar-width " lg={3}>
           <MainProfile />
+          <Connections />
+          <ProfileOptions />
         </Col>
-        
+
         <Col className="p-1" lg={6}>
           <MainPostCreator onPostCreated={handlePostCreated} />
           <AdvisedProfile />
-          
+
           {isLoading ? (
             <div className="bg-white rounded-2 border p-4 text-center mt-3">
               <p>Caricamento post in corso...</p>
@@ -77,14 +81,10 @@ const Home = () => {
                   <PostList post={post} onPostDeleted={() => fetchPosts()} />
                 </div>
               ))}
-              
+
               {visiblePosts.length < allPosts.length && (
                 <div className="d-flex justify-content-center mt-4 mb-4">
-                  <Button 
-                    variant="outline-primary" 
-                    onClick={loadMorePosts}
-                    className="rounded-pill px-4"
-                  >
+                  <Button variant="outline-primary" onClick={loadMorePosts} className="rounded-pill px-4">
                     Mostra altri post
                   </Button>
                 </div>
@@ -92,7 +92,7 @@ const Home = () => {
             </>
           )}
         </Col>
-        
+
         <Col className="p-1" lg={3}>
           <LinkedNews />
           <Advertising />

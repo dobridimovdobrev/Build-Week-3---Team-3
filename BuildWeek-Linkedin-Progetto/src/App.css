@@ -168,7 +168,12 @@ button {
   border-radius: 50%;
 }
 
-/* active class bootstrap */
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-    color: var(--bs-blue);
+.connection-link:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+  color: black !important;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--bs-blue);
 }
