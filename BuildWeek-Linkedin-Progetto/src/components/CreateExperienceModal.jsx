@@ -5,6 +5,8 @@ import Modal from "react-bootstrap/Modal";
 import { BsPlusLg } from "react-icons/bs";
 import Alert from "react-bootstrap/Alert";
 import { Container } from "react-bootstrap";
+import { fetchExperiencesAction } from "../redux/actions";
+import { useDispatch } from "react-redux";
 
 const CreateExperienceModal = (props) => {
   const [showAlert, setShowAlert] = useState(false);
@@ -12,9 +14,9 @@ const CreateExperienceModal = (props) => {
   const [show, setShow] = useState(false);
 
   const userId = "68f6048d6dfc200015d39891";
-  const url = `https://striveschool-api.herokuapp.com/api/profile/${userId}/experiences`;
+  const baseUrl = `https://striveschool-api.herokuapp.com/api/profile/${userId}/experiences`;
   const apiKey = import.meta.env.VITE_LINKEDIN_KEY;
-
+  const dispatch = useDispatch();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -40,7 +42,7 @@ const CreateExperienceModal = (props) => {
 
   const createExperienceApi = async () => {
     try {
-      const response = await fetch(url, {
+      const response = await fetch(baseUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,6 +64,9 @@ const CreateExperienceModal = (props) => {
           image: "",
         });
 
+          //aggiorna la lista del experiences globalmente
+        dispatch(fetchExperiencesAction(baseUrl, apiKey));
+
         setTimeout(() => {
           setShowAlert(false);
         }, 3000);
@@ -78,7 +83,7 @@ const CreateExperienceModal = (props) => {
       <button onClick={handleShow}>
         <BsPlusLg className="fs-5" />
       </button>
-      
+
       <Modal
         {...props}
         size="lg"
@@ -87,7 +92,6 @@ const CreateExperienceModal = (props) => {
         show={show}
         onHide={handleClose}
       >
-        
         <Form onSubmit={handleSubmit}>
           {/* experience  title */}
           <Modal.Header className="border-0" closeButton>
@@ -98,7 +102,7 @@ const CreateExperienceModal = (props) => {
               <Alert variant="success">Esperienza creata con successo!</Alert>
             </Container>
           )}
-          
+
           <Modal.Body>
             {/*role */}
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Jobs from "./pages/Jobs";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 import "./App.css";
 
 function App() {

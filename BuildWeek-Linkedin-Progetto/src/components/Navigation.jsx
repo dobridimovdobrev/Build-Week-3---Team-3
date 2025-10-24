@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BiSearch } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import { RiArrowDropDownFill } from "react-icons/ri";
 
 function Navigation() {

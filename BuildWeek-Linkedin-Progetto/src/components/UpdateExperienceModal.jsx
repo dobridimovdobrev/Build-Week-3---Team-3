@@ -6,10 +6,12 @@ import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
 import Alert from "react-bootstrap/Alert";
 import { Container } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchExperiencesAction, getExperiencesAction } from "../redux/actions";
 
 const UpdateExperienceModal = (props) => {
   const [show, setShow] = useState(false);
-  const [experiences, setExperiences] = useState([]);
+  /* const [experiences, setExperiences] = useState([]); */
   const [selectedExperience, setSelectedExperience] = useState(null);
   const [formData, setFormData] = useState({});
   const [successExperienceId, setSuccessExperienceId] = useState(null);
@@ -20,13 +22,16 @@ const UpdateExperienceModal = (props) => {
   const baseUrl = `https://striveschool-api.herokuapp.com/api/profile/${userId}/experiences`;
   const apiKey = import.meta.env.VITE_LINKEDIN_KEY;
 
+  const dispatch = useDispatch();
+  const experiences = useSelector((state) => state.experiences.list);
+
   const handleClose = () => setShow(false);
   const handleShow = () => {
     setShow(true);
-    fetchExperiences();
+   /*  fetchExperiences(); */
   };
 
-  const fetchExperiences = async () => {
+ /*  const fetchExperiences = async () => {
     try {
       const response = await fetch(baseUrl, {
         method: "GET",
@@ -38,15 +43,18 @@ const UpdateExperienceModal = (props) => {
 
       if (response.ok) {
         const data = await response.json();
-        setExperiences(data);
-      } else {
-        console.error("Errore nel caricamento delle esperienze");
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
+         setExperiences(data); // questa riga non serve piu una volta configurato redux base
+         dispatch(getExperiencesAction(data));
+         
+         } else {
+          console.error("Errore nel caricamento delle esperienze");
+      }
+      } catch (error) {
+        console.error(error);
+        }
+        }; */
+        
   const handleSelect = (experience) => {
     setSelectedExperience(experience);
     
@@ -85,7 +93,8 @@ const UpdateExperienceModal = (props) => {
 
       if (response.ok) {
         setSuccessExperienceId(experienceId);
-        fetchExperiences();
+       /*  fetchExperiences(); */
+       dispatch(fetchExperiencesAction(baseUrl, apiKey));
         
         setTimeout(() => {
           setSuccessExperienceId(null);
@@ -120,7 +129,8 @@ const UpdateExperienceModal = (props) => {
       });
 
       if (response.ok) {
-        fetchExperiences();
+        /* fetchExperiences(); */
+         dispatch(fetchExperiencesAction(baseUrl, apiKey));
         setShowDeleteModal(false);
       } else {
         console.error("Delete experience failed");
