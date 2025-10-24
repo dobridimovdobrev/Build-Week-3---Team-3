@@ -31,7 +31,7 @@ function Navigation() {
               {/* search icon */}
             </div>
             {/* Menu items */}
-            <NavLink to="/" className="d-flex flex-column nav-link align-items-center margin-custom">
+            <NavLink to="/" className="d-flex flex-column nav-link align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ function Navigation() {
               </svg>
               Home
             </NavLink>
-            <Nav.Link className="d-flex flex-column justify-content-center align-items-center">
+            <Nav.Link className="d-flex flex-column nav-link align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ function Navigation() {
               </svg>
               Lavoro
             </NavLink>
-            <Nav.Link className="d-flex flex-column align-items-center">
+            <Nav.Link className="d-flex flex-column nav-link align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ function Navigation() {
               </svg>
               Messaggistica
             </Nav.Link>
-            <Nav.Link className="d-flex flex-column align-items-center">
+            <Nav.Link className="d-flex flex-column nav-link align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -116,7 +116,7 @@ function Navigation() {
             </NavLink>
             {/* vertical line */}
             <div className="vr"></div>
-            <div className="d-flex justify-content-center flex-column align-items-center px-2">
+            <div className="d-flex nav-link flex-column align-items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

@@ -75,11 +75,10 @@ const CreateExperienceModal = (props) => {
 
   return (
     <>
-      {/* Create experience button */}
       <button onClick={handleShow}>
         <BsPlusLg className="fs-5" />
       </button>
-      {/* close modal button */}
+      
       <Modal
         {...props}
         size="lg"
@@ -88,9 +87,9 @@ const CreateExperienceModal = (props) => {
         show={show}
         onHide={handleClose}
       >
-        {/* Form */}
+        
         <Form onSubmit={handleSubmit}>
-          {/* experience head title */}
+          {/* experience  title */}
           <Modal.Header className="border-0" closeButton>
             <Modal.Title>Aggiungi esperienza</Modal.Title>
           </Modal.Header>
@@ -99,9 +98,9 @@ const CreateExperienceModal = (props) => {
               <Alert variant="success">Esperienza creata con successo!</Alert>
             </Container>
           )}
-          {/* experience content */}
+          
           <Modal.Body>
-            {/*Role */}
+            {/*role */}
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className="text-muted custom-font">
                 Qualifica *
@@ -115,7 +114,7 @@ const CreateExperienceModal = (props) => {
                 onChange={handleInput}
               />
             </Form.Group>
-            {/* Company*/}
+            {/* company*/}
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className="text-muted custom-font">
                 Azienda o organizzazione*
@@ -178,7 +177,7 @@ const CreateExperienceModal = (props) => {
                 onChange={handleInput}
               />
             </Form.Group>
-            {/* Area City*/}
+            {/* area*/}
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className="text-muted custom-font">
                 Localita *
@@ -192,7 +191,7 @@ const CreateExperienceModal = (props) => {
                 onChange={handleInput}
               />
             </Form.Group>
-            {/* Upload image */}
+            {/* image */}
             <Form.Group controlId="formFile" className="mb-3">
               <Form.Label className="text-muted custom-font">
                 Carica immagine *

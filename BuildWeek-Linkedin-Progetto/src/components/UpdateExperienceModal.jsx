@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
 import Alert from "react-bootstrap/Alert";
-
+import { Container } from "react-bootstrap";
 
 const UpdateExperienceModal = (props) => {
   const [show, setShow] = useState(false);
@@ -26,7 +26,6 @@ const UpdateExperienceModal = (props) => {
     fetchExperiences();
   };
 
-  
   const fetchExperiences = async () => {
     try {
       const response = await fetch(baseUrl, {
@@ -48,10 +47,8 @@ const UpdateExperienceModal = (props) => {
     }
   };
 
-  
   const handleSelect = (experience) => {
     setSelectedExperience(experience);
-    
     
     const formatDate = (dateString) => {
       if (!dateString) return "";
@@ -70,12 +67,10 @@ const UpdateExperienceModal = (props) => {
     });
   };
 
-  
   const handleInput = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
 
   const updateExperience = async (experienceId) => {
     try {
@@ -90,33 +85,30 @@ const UpdateExperienceModal = (props) => {
 
       if (response.ok) {
         setSuccessExperienceId(experienceId);
-        fetchExperiences(); 
+        fetchExperiences();
         
         setTimeout(() => {
           setSuccessExperienceId(null);
         }, 3000);
       } else {
-        console.error("Errore nell'aggiornamento dell'esperienza");
+        console.error("Update experience failed");
       }
     } catch (error) {
       console.error(error);
     }
   };
 
-  
   const handleSubmit = (e, experienceId) => {
     e.preventDefault();
     updateExperience(experienceId);
   };
 
-  
   const handleDeleteClick = (e, experience) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     setExperienceToDelete(experience);
     setShowDeleteModal(true);
   };
 
- 
   const deleteExperience = async (experienceId) => {
     try {
       const response = await fetch(`${baseUrl}/${experienceId}`, {
@@ -131,7 +123,7 @@ const UpdateExperienceModal = (props) => {
         fetchExperiences();
         setShowDeleteModal(false);
       } else {
-        console.error("Errore nell'eliminazione dell'esperienza");
+        console.error("Delete experience failed");
       }
     } catch (error) {
       console.error(error);
@@ -140,7 +132,6 @@ const UpdateExperienceModal = (props) => {
 
   return (
     <>
-      {/* delete confirm modal */}
       <Modal
         show={showDeleteModal}
         onHide={() => setShowDeleteModal(false)}
@@ -188,6 +179,12 @@ const UpdateExperienceModal = (props) => {
           <Modal.Title>Modifica esperienza</Modal.Title>
         </Modal.Header>
         
+        {successExperienceId && (
+          <Container className="mt-2">
+            <Alert variant="success">Esperienza aggiornata con successo!</Alert>
+          </Container>
+        )}
+        
         <Modal.Body>
           {experiences.length === 0 ? (
             <p className="text-center py-3">Caricamento esperienze...</p>
@@ -209,7 +206,7 @@ const UpdateExperienceModal = (props) => {
                   </Accordion.Header>
                   <Accordion.Body>
                     <Form onSubmit={(e) => handleSubmit(e, experience._id)}>
-                      {/* Role */}
+                      {/* role */}
                       <Form.Group className="mb-3" controlId="formRole">
                         <Form.Label className="text-muted custom-font">
                           Qualifica *
@@ -224,7 +221,7 @@ const UpdateExperienceModal = (props) => {
                         />
                       </Form.Group>
                       
-                      {/* Company */}
+                      {/* company */}
                       <Form.Group className="mb-3" controlId="formCompany">
                         <Form.Label className="text-muted custom-font">
                           Azienda o organizzazione *
@@ -239,9 +236,9 @@ const UpdateExperienceModal = (props) => {
                         />
                       </Form.Group>
                       
-                      {/* Date */}
+                      
                       <Form.Group className="d-flex gap-3 mb-3" controlId="formDates">
-                        {/* Start date */}
+                        {/* start date */}
                         <div className="w-100">
                           <Form.Label className="text-muted custom-font">
                             Data inizio
@@ -253,7 +250,7 @@ const UpdateExperienceModal = (props) => {
                             onChange={handleInput}
                           />
                         </div>
-                        {/* End date */}
+                        {/* end date */}
                         <div className="w-100">
                           <Form.Label className="text-muted custom-font">
                             Data fine
@@ -267,7 +264,7 @@ const UpdateExperienceModal = (props) => {
                         </div>
                       </Form.Group>
                       
-                      {/* Description */}
+                      {/* description */}
                       <Form.Group className="mb-3" controlId="formDescription">
                         <Form.Label className="text-muted custom-font">
                           Descrizione
@@ -282,7 +279,7 @@ const UpdateExperienceModal = (props) => {
                         />
                       </Form.Group>
                       
-                      {/* Area */}
+                      {/* area */}
                       <Form.Group className="mb-3" controlId="formArea">
                         <Form.Label className="text-muted custom-font">
                           Località *
@@ -297,7 +294,7 @@ const UpdateExperienceModal = (props) => {
                         />
                       </Form.Group>
                       
-                      {/* Image */}
+                      {/* image */}
                       <Form.Group controlId="formImage" className="mb-3">
                         <Form.Label className="text-muted custom-font">
                           URL Immagine
@@ -310,12 +307,7 @@ const UpdateExperienceModal = (props) => {
                         />
                       </Form.Group>
                       
-                      <div className="d-flex justify-content-between align-items-center mt-3">
-                        <div>
-                          {successExperienceId === experience._id && (
-                            <Alert variant="success" className="py-1 px-2 mb-0">Esperienza aggiornata con successo!</Alert>
-                          )}
-                        </div>
+                      <div className="d-flex justify-content-end mt-3">
                         <Button type="submit" variant="primary">
                           Aggiorna
                         </Button>
