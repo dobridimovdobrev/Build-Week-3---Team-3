@@ -143,7 +143,7 @@ const PostList = ({ post, onPostDeleted }) => {
                     />
                     <div className="flex-column">
                       <div className="m-3">
-                        <h5>{post.user ? `${post.user.name} ${post.user.surname}` : post.username}</h5>
+                        <h5>{post.user && typeof post.user !== "string" ? `${post.user.name} ${post.user.surname}` : post.username}</h5>
                         <span className="text-muted">{new Date(post.createdAt).toLocaleDateString()}</span>
                       </div>
                       <div className="m-3">
