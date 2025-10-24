@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { HiUserAdd } from "react-icons/hi";
+import { LuArrowRight } from "react-icons/lu";
 
 const KnownUsers = () => {
   return (
@@ -36,7 +37,7 @@ const KnownUsers = () => {
             {/* line horizontal */}
             <hr className="mx-4" />
             <button className="showall-btn w-100 border-top fw-medium" style={{ height: "41px" }}>
-              Mostra tutto
+              Mostra tutto <LuArrowRight className="mb-1" />
             </button>
           </div>
         </Col>

@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import JobsList from "./JobsList";
+import { LuArrowRight } from "react-icons/lu";
 
 const RecommendedJobs = () => {
   return (
@@ -18,13 +19,9 @@ const RecommendedJobs = () => {
               {/* line horizontal */}
               <hr className="mx-4" />
             </div>
-            <Container>
-              <div className="d-flex justify-content-center mx-2">
-                <button className="showall-btn rounded-2 mb-1 fw-medium w-100" style={{ height: "41px" }}>
-                  Mostra tutto
-                </button>
-              </div>
-            </Container>
+            <button className="showall-btn w-100 border-top fw-medium" style={{ height: "41px" }}>
+              Mostra tutto <LuArrowRight className="mb-1" />
+            </button>
           </div>
         </Col>
       </Row>
