@@ -8,6 +8,7 @@ import AdvisedProfile from "../components/AdvisedProfile";
 import Connections from "../components/Connections";
 import ProfileOptions from "../components/ProfileOptions";
 import PostList from "../components/PostsList";
+import { getAllPosts } from "../api/postsApi";
 
 const Home = () => {
   const [allPosts, setAllPosts] = useState([]);
