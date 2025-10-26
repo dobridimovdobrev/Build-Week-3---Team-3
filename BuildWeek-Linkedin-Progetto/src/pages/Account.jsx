@@ -1,10 +1,10 @@
-import Profile from "../components/Profile";
-import ExperiencesList from "../components/ExperiencesList";
-import Sidebar from "../components/Sidebar";
+import Profile from "../components/profile/Profile";
+import ExperiencesList from "../components/experiences/ExperiencesList";
+import Sidebar from "../components/sidebars/right-sidebar/Sidebar";
 import { Container, Row, Col } from "react-bootstrap";
-import SideConsulted from "../components/SideConsulted";
-import KnownUsers from "../components/KnownUsers";
-import Advertising from "../components/Advertising";
+import SideConsulted from "../components/sidebars/right-sidebar/SideConsulted";
+import KnownUsers from "../components/sidebars/right-sidebar/KnownUsers";
+import Advertising from "../components/sidebars/right-sidebar/Advertising";
 
 const Account = () => {
   return (

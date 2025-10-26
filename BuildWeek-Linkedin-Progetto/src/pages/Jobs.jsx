@@ -1,8 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
-import MainProfile from "../components/MainProfile";
-import RecommendedJobs from "../components/RecommendedJobs";
-import Connections from "../components/Connections";
-import ProfileOptions from "../components/ProfileOptions";
+import MainProfile from "../components/profile/MainProfile";
+import RecommendedJobs from "../components/jobs/RecommendedJobs";
+import Connections from "../components/sidebars/left-sidebar/Connections";
+import ProfileOptions from "../components/sidebars/left-sidebar/ProfileOptions";
 
 const Jobs = () => {
   return (

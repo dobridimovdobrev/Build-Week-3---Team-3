@@ -14,12 +14,13 @@ const RecommendedJobs = () => {
               <p className="text-muted fs-6">In base al tuo profilo, alle tue preferenze e ad attività come candidature, ricerche e salvataggi</p>
             </div>
 
-              {/*Job list */}
+              {/*Job list */} 
             <div className="d-flex flex-column justify-content-between px-3 py-3">
               <JobsList />
-              {/* line horizontal */}
               <hr className="mx-4" />
             </div>
+
+            {/* show all button */}
             <button className="showall-btn w-100 border-top fw-medium" style={{ height: "41px" }}>
               Mostra tutto <LuArrowRight className="mb-1" />
             </button>

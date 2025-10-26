@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import MainProfile from "../components/MainProfile";
-import MainPostCreator from "../components/MainPostCreator";
-import Advertising from "../components/Advertising";
-import LinkedNews from "../components/LinkedNews";
-import AdvisedProfile from "../components/AdvisedProfile";
-import Connections from "../components/Connections";
-import ProfileOptions from "../components/ProfileOptions";
-import PostList from "../components/PostsList";
+import MainProfile from "../components/profile/MainProfile";
+import MainPostCreator from "../components/posts/MainPostCreator";
+import Advertising from "../components/sidebars/right-sidebar/Advertising";
+import LinkedNews from "../components/sidebars/right-sidebar/LinkedNews";
+import AdvisedProfile from "../components/profile/AdvisedProfile";
+import Connections from "../components/sidebars/left-sidebar/Connections";
+import ProfileOptions from "../components/sidebars/left-sidebar/ProfileOptions";
+import PostList from "../components/posts/PostsList";
 import { getAllPosts } from "../api/postsApi";
 
 const Home = () => {

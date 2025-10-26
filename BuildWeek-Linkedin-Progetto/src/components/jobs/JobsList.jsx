@@ -27,14 +27,20 @@ const JobsList = () => {
               </div>
             </div>
           </div>
+          
           <div className="flex-column">
             <div className="text-end fs-4 mb-1">
+
+              {/* update button */}
               <button className="rounded-display">
                 <BsThreeDots className="my-2 mx-1" />
               </button>
+
+              {/* delete button */}
               <button className="rounded-display">
                 <AiOutlineClose className="my-2 mx-1" />
               </button>
+
             </div>
           </div>
         </div>
