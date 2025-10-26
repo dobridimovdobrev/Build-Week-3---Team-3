@@ -4,7 +4,7 @@ import { AiOutlineClose, AiOutlineLike } from "react-icons/ai";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { LuRepeat2 } from "react-icons/lu";
 import { BsSendFill, BsThreeDots } from "react-icons/bs";
-import { deletePost, updatePost } from "../api/postsApi";
+import { deletePost, updatePost } from "../../api/postsApi";
 
 const PostList = ({ post, onPostDeleted }) => {
   const [showEditModal, setShowEditModal] = useState(false);

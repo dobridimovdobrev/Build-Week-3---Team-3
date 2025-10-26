@@ -4,7 +4,7 @@ import UpdateExperienceModal from "./UpdateExperienceModal";
 import { Container, Row, Col } from "react-bootstrap";
 import { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchExperiencesAction, GET_EXPERIENCES, getExperiencesAction } from "../redux/actions";
+import { fetchExperiencesAction, GET_EXPERIENCES, getExperiencesAction } from "../../redux/actions";
 
 
 const ExperiencesList = () => {

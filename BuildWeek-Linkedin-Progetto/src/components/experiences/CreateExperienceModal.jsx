@@ -5,7 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import { BsPlusLg } from "react-icons/bs";
 import Alert from "react-bootstrap/Alert";
 import { Container } from "react-bootstrap";
-import { fetchExperiencesAction } from "../redux/actions";
+import { fetchExperiencesAction } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 
 const CreateExperienceModal = (props) => {

@@ -7,7 +7,7 @@ import Accordion from "react-bootstrap/Accordion";
 import Alert from "react-bootstrap/Alert";
 import { Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchExperiencesAction, getExperiencesAction } from "../redux/actions";
+import { fetchExperiencesAction, getExperiencesAction } from "../../redux/actions";
 
 const UpdateExperienceModal = (props) => {
   const [show, setShow] = useState(false);

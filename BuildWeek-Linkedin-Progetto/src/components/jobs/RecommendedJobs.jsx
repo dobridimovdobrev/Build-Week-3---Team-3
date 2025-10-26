@@ -13,8 +13,9 @@ const RecommendedJobs = () => {
               <h4>Le principali offerte di lavoro per te</h4>
               <p className="text-muted fs-6">In base al tuo profilo, alle tue preferenze e ad attività come candidature, ricerche e salvataggi</p>
             </div>
+
+              {/*Job list */}
             <div className="d-flex flex-column justify-content-between px-3 py-3">
-              {/* Company Profiles */}
               <JobsList />
               {/* line horizontal */}
               <hr className="mx-4" />

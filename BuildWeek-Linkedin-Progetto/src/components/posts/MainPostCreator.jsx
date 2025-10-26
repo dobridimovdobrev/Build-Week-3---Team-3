@@ -3,7 +3,7 @@ import { Container, Row, Col, Modal, Form, Button, Alert } from "react-bootstrap
 import { IoLogoYoutube } from "react-icons/io";
 import { HiOutlinePhoto } from "react-icons/hi2";
 import { HiOutlineNewspaper } from "react-icons/hi2";
-import { createPost } from "../api/postsApi";
+import { createPost } from "../../api/postsApi";
 
 const MainPostCreator = ({ onPostCreated }) => {
   const [showModal, setShowModal] = useState(false);
