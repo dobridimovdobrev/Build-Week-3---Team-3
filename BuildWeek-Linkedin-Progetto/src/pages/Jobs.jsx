@@ -3,8 +3,17 @@ import MainProfile from "../components/profile/MainProfile";
 import RecommendedJobs from "../components/jobs/RecommendedJobs";
 import Connections from "../components/sidebars/left-sidebar/Connections";
 import ProfileOptions from "../components/sidebars/left-sidebar/ProfileOptions";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchJobsAction } from "../redux/actions";
 
 const Jobs = () => {
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(fetchJobsAction());
+  }, [dispatch]);
+  
   return (
     <Container>
       <Row className="gap-3 ">

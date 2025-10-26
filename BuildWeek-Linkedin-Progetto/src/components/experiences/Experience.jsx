@@ -2,10 +2,10 @@ const Experience = ({experience}) => {
 
 /*   console.log( "questo e experince", experience); */
   return (
-    <>
-      <div className="d-flex">
+    <div className="experience-item">
+      <div className="d-flex mb-4">
         <div className="me-3">
-        
+
             <img
               src={experience.image}
               x="0"
@@ -13,7 +13,7 @@ const Experience = ({experience}) => {
               width="48"
               height="48"
             />
-          
+
         </div>
         <div className="d-flex flex-column flex-grow-1">
           <h6 className="m-0">{experience.company}</h6>
@@ -27,8 +27,8 @@ const Experience = ({experience}) => {
           </p>
         </div>
       </div>
-      <hr />
-    </>
+      <hr className="my-4 experience-hr" />
+    </div>
   );
 };
 

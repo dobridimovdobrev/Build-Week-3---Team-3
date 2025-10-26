@@ -1,8 +1,8 @@
-const baseUrl = "https://striveschool-api.herokuapp.com/api/posts/";
+const baseUrl = "https://strive-benchmark.herokuapp.com/api/jobs?&limit=10 ";
 const apiKey = import.meta.env.VITE_LINKEDIN_KEY;
 
 
-export const jobsFetchAll = async () => {
+export const jobsFetchAllApi = async () => {
 
     try {
         const response = await fetch(baseUrl, {
@@ -14,8 +14,9 @@ export const jobsFetchAll = async () => {
         });
 
         if(response.ok){
-            const data = await response;
-            console.log(data);
+            const data = await response.json();
+            /* console.log("Questo console e della data", data); */
+            return data;
             
         }else{
             throw new Error("Fetch jobs list failed");

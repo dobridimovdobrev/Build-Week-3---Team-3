@@ -1,36 +1,33 @@
-import { Container } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
 
-const JobsList = () => {
+const JobsList = ({ job }) => {
+
+
   return (
-    <Container>
+    <>
       {/* Company Profiles */}
-      <div className="d-flex flex-column ">
+      <div className="d-flex flex-column job-item">
         <div className="d-flex justify-content-between">
           <div className="d-flex">
             <img
               className="rounded-circle mt-3"
               width={48}
               height={48}
-              src="https://img.freepik.com/vettori-premium/icona-predefinita-del-profilo-dell-avatar-immagine-dell-utente-dei-social-media-icona-dell-avatar-grigio-silhouette-del-profilo-vuoto-illustrazione-vettoriale_561158-3485.jpg?w=360"
-              alt="profileImg"
+              src={`https://ui-avatars.com/api/?name=${job.company_name}&size=48&background=random`}
+              alt={job.title}
             />
             <div className="flex-column">
               <div className="m-3">
-                <h5>Company Name</h5>
-                <span className="text-muted">Role</span>
+                <h5>{job.company_name}</h5>
+                <span className="text-muted">{job.category}</span>
               </div>
               <div className="m-3">
-                <h6>Title Job</h6>
-                <p className="text-muted">Description</p>
+                <h6>{job.title}</h6>
+                <p className="text-muted">{job.description.slice(0, 600) + '...'}</p>
               </div>
             </div>
-          </div>
-          
-          <div className="flex-column">
-            <div className="text-end fs-4 mb-1">
-
+            <div className="d-flex align-items-start mt-3">
               {/* update button */}
               <button className="rounded-display">
                 <BsThreeDots className="my-2 mx-1" />
@@ -40,12 +37,12 @@ const JobsList = () => {
               <button className="rounded-display">
                 <AiOutlineClose className="my-2 mx-1" />
               </button>
-
             </div>
           </div>
         </div>
+        <hr className="my-4 remove-last-hr" />
       </div>
-    </Container>
+    </>
   );
 };
 

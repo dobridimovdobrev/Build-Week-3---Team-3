@@ -177,3 +177,12 @@ button {
 .navbar-nav .nav-link.show {
   color: var(--bs-blue);
 }
+
+
+.job-item:last-child .remove-last-hr{
+  display: none;
+}
+
+.experience-item:last-child .experience-hr{
+  display: none;
+}

@@ -1,7 +1,10 @@
-import { GET_EXPERIENCES } from "../actions";
+import { GET_EXPERIENCES, GET_JOBS } from "../actions";
 
 const initialState = {
   experiences: {
+    list: [],
+  },
+  jobs: {
     list: [],
   },
 };
@@ -12,6 +15,12 @@ const mainReducer = (state = initialState, action) => {
       return {
         ...state,
         experiences: { ...state.experiences, list: action.payload },
+      };
+
+    case GET_JOBS:
+      return {
+        ...state,
+        jobs: { ...state.jobs, list: action.payload },
       };
 
     default:
